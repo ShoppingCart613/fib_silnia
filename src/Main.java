@@ -4,22 +4,24 @@ public class Main {
     public static void main(String[] args) {
 
         long start = System.nanoTime();
-        silnia(10);
+        System.out.println(silnia(10));
         long stop = System.nanoTime();
-        System.out.println("czas wykonania silni iteracyjnie: " + (stop - start));
         long start2 = System.nanoTime();
-        silnia2(10);
+        System.out.println(silnia2(10));
         long stop2 = System.nanoTime();
-        System.out.println("czas wykonania silni rekurencyjnie: " + (stop2 - start2));
+        long wynik = stop - start;
+        long wynik2 = stop2 - start2;
+        System.out.println("czas wykonania silni iteracyjnie to " + wynik + " a rekurencyjnie " + wynik2);
 
         start = System.nanoTime();
-        fib(25);
+        System.out.println(fib(25));
         stop = System.nanoTime();
-        System.out.println("czas wykonania fib iteracyjnie: " + (stop - start));
         start2 = System.nanoTime();
-        fib2(25);
+        System.out.println(fib2(25));
         stop2 = System.nanoTime();
-        System.out.println("czas wykonania fib rekurencyjnie: " + (stop2 - start2));
+        wynik = stop - start;
+        wynik2 = stop2 - start2;
+        System.out.println("czas wykonania fibonacciego iteracyjnie to " + wynik + " a rekurencyjnie " + wynik2);
 
     }
     public static int silnia(int x){
